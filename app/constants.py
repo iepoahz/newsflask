@@ -1,8 +1,10 @@
 # 图片验证码Redis有效期， 单位：秒
-IMAGE_CODE_REDIS_EXPIRES = 300
+import os
+
+IMAGE_CODE_REDIS_EXPIRES = 500
 
 # 短信验证码Redis有效期，单位：秒
-SMS_CODE_REDIS_EXPIRES = 300
+SMS_CODE_REDIS_EXPIRES = 500
 
 # 七牛空间域名
 QINIU_DOMIN_PREFIX = "http://oyucyko3w.bkt.clouddn.com/"
@@ -27,3 +29,9 @@ ADMIN_USER_PAGE_MAX_COUNT = 10
 
 # 管理员页面新闻每页多最数据条数
 ADMIN_NEWS_PAGE_MAX_COUNT = 10
+
+#头像保存地址
+UP_DIR = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'static/avatar_media/')
+
+#新闻图像保存地址
+NEWS_DIR =  os.path.join(os.path.abspath(os.path.dirname(__file__)), 'static/news_media/')
